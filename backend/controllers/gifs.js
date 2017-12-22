@@ -5,7 +5,7 @@ const router = express.Router()
 router.get('/', (req, res) => {
     Gif.find({})
         .then((gifs) => {
-            res.render('gifs-index', {
+            res.json('gifs-index', {
                 gifs: gifs
             })
     })
@@ -13,3 +13,4 @@ router.get('/', (req, res) => {
         console.log(err)
     })
 })
+

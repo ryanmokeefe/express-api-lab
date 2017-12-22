@@ -5,6 +5,8 @@ const GifSchema = new mongoose.Schema({
     url: String,
 })
 
-const Gif = mongoose.model('Gif', GifSchema)
+// const Gif = // moved defined Gif to seeds.js
+// instead, JUST attach the Gif and GifSchema to the mongoose model.
+mongoose.model('Gif', GifSchema)
 
-module.exports = Gif
+module.exports = mongoose // export the mongoose model ( with attached Gif and GifSchema ), not the defined Gif

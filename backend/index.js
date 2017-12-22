@@ -1,10 +1,8 @@
 console.log('hello node')
 
 const express = require('express')
-const hbs = require('express-handlebars')
 const mongoose = require('mongoose')
 const parser = require('body-parser')
-const methodOverride = require('method-override')
 const app = express()
 
 
