@@ -1,11 +1,12 @@
 const express = require('express')
-const Gif = require('./db/schema')
+const Gif = require('../db/schema')
+// const seeds = require('./seeds')
 const router = express.Router()
 
 router.get('/', (req, res) => {
     Gif.find({})
         .then((gifs) => {
-            res.json('gifs-index', {
+            res.json('gifs', {
                 gifs: gifs
             })
     })
@@ -40,3 +41,4 @@ router.delete('/:id', (req, res) => {
 })
 
 // export router
+module.exports = router
