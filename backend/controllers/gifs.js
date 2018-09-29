@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
     Gif.find({})
         .then((gifs) => {
             res.json('gifs', {
-                gifs: gifs
+                gifs: gif
             })
     })
     .catch((err) => {
